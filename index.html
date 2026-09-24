@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TechNova 2026 - Event Registration</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">TechNova 2026</div>
+      <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#event">Event Details</a>
+        <a href="#schedule">Schedule</a>
+        <a href="#register">Register</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div>
+        <p class="tag">SINCET • Skill Development Cell</p>
+        <h1>TechNova 2026</h1>
+        <h2>AI & Web Technology Workshop</h2>
+        <p>Learn modern web development, explore AI-assisted tools, and build practical digital skills.</p>
+        <a class="btn" href="#register">Register Now</a>
+      </div>
+    </section>
+
+    <section id="event" class="section">
+      <h2>Event Information</h2>
+      <div class="cards">
+        <div class="card"><h3>📅 Date</h3><p>15 October 2026</p></div>
+        <div class="card"><h3>⏰ Time</h3><p>9:30 AM – 4:00 PM</p></div>
+        <div class="card"><h3>📍 Venue</h3><p>Seminar Hall, SINCET</p></div>
+        <div class="card"><h3>🎓 Category</h3><p>Technology Event</p></div>
+      </div>
+      <div class="description">
+        <h3>About the Event</h3>
+        <p>TechNova 2026 is a student-focused technology workshop covering HTML, CSS, JavaScript, responsive design and AI-assisted web development.</p>
+      </div>
+    </section>
+
+    <section id="schedule" class="section alt">
+      <h2>Event Schedule</h2>
+      <div class="table-wrap">
+        <table>
+          <tr><th>Time</th><th>Session</th></tr>
+          <tr><td>09:30 AM</td><td>Registration & Welcome</td></tr>
+          <tr><td>10:00 AM</td><td>Introduction to Web Development</td></tr>
+          <tr><td>11:30 AM</td><td>HTML & CSS Hands-on</td></tr>
+          <tr><td>01:00 PM</td><td>Lunch Break</td></tr>
+          <tr><td>02:00 PM</td><td>JavaScript & Form Validation</td></tr>
+          <tr><td>03:15 PM</td><td>AI-Assisted Website Development</td></tr>
+          <tr><td>04:00 PM</td><td>Certificate & Closing</td></tr>
+        </table>
+      </div>
+    </section>
+
+    <section id="register" class="section">
+      <h2>Event Registration</h2>
+      <form id="registrationForm" novalidate>
+        <div class="form-grid">
+          <div class="field">
+            <label for="name">Participant Name *</label>
+            <input type="text" id="name" placeholder="Enter your name">
+            <small class="error" id="nameError"></small>
+          </div>
+          <div class="field">
+            <label for="regno">Register Number *</label>
+            <input type="text" id="regno" placeholder="Enter register number">
+            <small class="error" id="regnoError"></small>
+          </div>
+          <div class="field">
+            <label for="dept">Department / Organization *</label>
+            <select id="dept">
+              <option value="">Select Department</option>
+              <option>Information Technology</option>
+              <option>Computer Science Engineering</option>
+              <option>AI & Data Science</option>
+              <option>AI & Machine Learning</option>
+              <option>Electronics & Communication Engineering</option>
+              <option>Electrical & Electronics Engineering</option>
+              <option>Mechanical Engineering</option>
+              <option>Other</option>
+            </select>
+            <small class="error" id="deptError"></small>
+          </div>
+          <div class="field">
+            <label for="year">Year of Study *</label>
+            <select id="year">
+              <option value="">Select Year</option>
+              <option>I Year</option>
+              <option>II Year</option>
+              <option>III Year</option>
+              <option>IV Year</option>
+            </select>
+            <small class="error" id="yearError"></small>
+          </div>
+          <div class="field">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" placeholder="example@email.com">
+            <small class="error" id="emailError"></small>
+          </div>
+          <div class="field">
+            <label for="mobile">Mobile Number *</label>
+            <input type="tel" id="mobile" maxlength="10" placeholder="10-digit mobile number">
+            <small class="error" id="mobileError"></small>
+          </div>
+          <div class="field full">
+            <label for="eventChoice">Event Selection *</label>
+            <select id="eventChoice">
+              <option value="">Select Event</option>
+              <option>AI & Web Technology Workshop</option>
+              <option>Web Development Hands-on</option>
+              <option>JavaScript Form Validation Session</option>
+            </select>
+            <small class="error" id="eventError"></small>
+          </div>
+          <div class="field full">
+            <label for="feedback">Special Requirement / Message (Optional)</label>
+            <textarea id="feedback" rows="4" placeholder="Enter your message"></textarea>
+          </div>
+        </div>
+        <button class="btn submit-btn" type="submit">Submit Registration</button>
+        <button class="btn secondary" type="reset" id="clearBtn">Clear</button>
+        <div id="successMessage" class="success"></div>
+      </form>
+    </section>
+
+    <section id="records" class="section alt">
+      <h2>Registration Records</h2>
+      <p class="note">Demo data management: registrations are stored in the browser using localStorage. Do not use this demo for sensitive personal information.</p>
+      <div id="recordCount" class="record-count">No registrations yet.</div>
+      <div class="table-wrap">
+        <table id="recordsTable">
+          <thead>
+            <tr><th>Name</th><th>Register No.</th><th>Department</th><th>Email</th><th>Event</th></tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <button class="btn danger" id="clearRecords">Clear Demo Records</button>
+    </section>
+
+    <section id="contact" class="section contact">
+      <h2>Contact</h2>
+      <p><strong>Organizer:</strong> Skill Development Cell</p>
+      <p><strong>College:</strong> Sir Isaac Newton College of Engineering and Technology</p>
+      <p><strong>Location:</strong> Pappakovil – Nagapattinam</p>
+      <p><strong>Email:</strong> skilldevelopment@sincet.ac.in</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 TechNova Event Registration | Designed for Skill Development Activity</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
